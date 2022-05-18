@@ -3,29 +3,39 @@
 /*Fecha: 1 de marzo de 2021*/
 /*Proyecto: Proyecto Integrador 1 Intersemestral - Página de Calendy Qro*/
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 body {
     margin: 0px;
     padding: 0px;
+    margin-top: 0px;
 }
 #logo {
-    padding-top: 5px; 
+    padding-top: 13px; 
     padding-right: 0px;
-    width: 60vw;
+    width: 50vw;
 }
-#logo img {
-    margin-left: 40px;
-    width: 30%;
+#logo h4 {
+    color: #ffffff;
+    text-align: left;
+    padding-left: 120px;
+    align-items: center;
 }
+
 #links {
+    width: 50vw;
+    margin: 10px;
+    margin-left: 120px;
+    align-items: center;
+    text-align: center;
 }
 nav {
+    
     display: flex;
-    align-items: center;
     position: fixed; 
-    background-color: #ffffff;
+    background-color: transparent;
     margin: 0;
-    width: 100%;
-    font-family: Georgia;
+    font-family: "Montserrat";
 }
 ul{
 
@@ -34,25 +44,53 @@ ul{
     padding: 0;
 }
 li{
-    font-size:1.5vw;
+    font-size:1.2vw;
     float: left;
+    align-content: space-between;
+    align-items: flex-end;
+    margin:0px;
 }
 li a{
     display: block;
-    color: #B67E26;
+    color: #ffffff;
     text-align: center;
     padding: 10px 10px;
     text-decoration: none;
 
 }
-nav ul li a {
-    transition: all 1s;
-}
+#btn2 {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 5px 10px;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.2vw;
+    margin-top:-5px
 
+}
 li a:hover {
     color: #F1CC92;
-    font-size: 123%;
+    font-size: 110%;
 }
+#btn2:hover {
+    background-color:#F1CC92;
+    font-size: 105%;
+}
+.scrolling-active {
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+} 
+.scrolling-active #links a {
+    color:#B67E26;
+}
+.scrolling-active #logo h4 {
+    color:#B67E26;
+}
+.scrolling-active #links #btn2{
+    color:#B67E26;
+    border: 1px solid #B67E26;;
+}
+
 header {
     background: url("assets/banner.png");
     height: 850px;
@@ -70,7 +108,7 @@ header {
 .info-header h2{
     font-size: 600%;
     color: white;
-    font-family: Georgia;
+    font-family: "Montserrat";
 }
 .info-header hr{
     border-color: #FFFFFF;
@@ -81,87 +119,34 @@ header {
 h1, h2, h3, h4, h4, h5, h6 {
     text-align: center;
     font-size: 200%;
-    font-family: Georgia;
+    font-family: "Montserrat";
     color: #643418;
     margin: 0;
     padding: 0;
 }
 p, span, strong, strong, button, label {
     font-size: 150%;
-    font-family: sans-serif;
+    font-family: "Montserrat";
     color: #ca8d2b;
 }
-#info {
-    background: url("assets/mision.gif");
-    background-position: center;
-    padding: 9.5% 0 9.5% 0;
-}
-.datos {
-    display: flex;
-    font-family: sans-serif;
-    margin: 2% 30% 0 30%;
-    text-align: center;
-    font-family: sans-serif;
-}
-.datos th h2{
-    font-size: 150%;
-    font-family: sans-serif;
-    color: #ca8d2b;
-}
-#menu {
-    padding: 150px 0 150px;
-    background-color: #f8cd77;
-    text-align: center;
-    color: white;
-}
-.btn button {
-    background-color: transparent;
-    border: 1px solid white;
-    padding: 15px 45px;
-    border-radius: 5px;
-    color: white;
-    font-size: 20px;
-}
-.contenedor {
-    margin-top: 20px;
-    background-color: #f8cd77;
-    display: flex;
-}
-.producto {
-    padding: 2%;
+#productos {
+    background-size: cover;
     background-color: #ffffff;
-    width: 60%;
-    height: 80%;
+    height: 950px;
+}
+table{
+    align-content: center;
     align-items: center;
-    font-size: 80%;
-    margin: 3%;
+    padding:3px 10px;
+    margin:auto;
+    width: 600px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
-.producto img{
-    align-self: center;
-    width: 100%;
-    border-radius: 50%;
-}
-.producto p {
-    padding: 3%;
-    text-align: center;
-}
-#galeria{
-    margin: 100px 0 200px 0;
-    padding-top: 150px;
-}
-.fila {
-    display: flex;
-    margin-bottom: 10px;
-    margin: 0 15px 15px 15px;
-}
-.caja-galeria {
-    width: 33.333333%;
-    padding: 20px 20px 0 20px;
-    margin 20px;
-}
-.caja-galeria img {
-    width: 100%;
-    display: block;
+table td{
+    margin:0px;
+    border-right: 
 }
 #contacto {
     background: url("assets/form.png");
@@ -174,6 +159,7 @@ p, span, strong, strong, button, label {
     color:#FFFFFF;
     size: 300%;
 }
+
 #formulario {
     max-width: 600px;
     margin: 0 auto;
@@ -181,16 +167,14 @@ p, span, strong, strong, button, label {
 .formal {
     width: 95%;
     padding: 20px;
-    background-color: transparent;
     border: 1px solid;
-    color: #ffffff;
-    
+    color: #B67E26;
     margin-bottom: 15px;
     border-radius: 5px;
 }
 .formulario input{
-    font-family: sans-serif;
-    background-color: #ffffff;
+    font-family: "Montserrat" sans-serif;
+    background: white;
 }
 .btn button {
     background-color: transparent;
@@ -205,7 +189,7 @@ p, span, strong, strong, button, label {
 footer {
     background-color: #FFFFFF;
     color: #B67E26;
-    font-family: Georgia;
+    font-family: "Montserrat" sans-serif;
     font-weight: bold;
     padding: 50px 0;
     margin: 0 40px 0 25px;
